@@ -51,7 +51,7 @@ The design day input describes the parameters to effect a ``design day'' simulat
 We refer you to the ASHRAE Handbook of Fundamentals for philosophy of what parameters are important for use as ``design conditions'' in sizing equipment.
 
 \begin{callout}
-  In the install, the ``design day files'' are included for the weather file locations that are included (weatherdata folder). All the design day definitions from the ASHRAE design conditions (latest publication date) are included, grouped by WMO region, on the main web site with the weather data. \url{http://www.energyplus.gov/cfm/weather_data.cfm} These files are in ``macro'' form but it is easy to cut and paste the appropriate definition segments. These files include the location information as well as some locations have \textbf{RunPeriodControl:DaylightSavingTime} objects.
+  In the install, the ``design day files'' are included for the weather file locations that are included (weatherdata folder). All the design day definitions from the ASHRAE design conditions (latest publication date) are included, grouped by WMO region, on the main web site with the weather data. http://www.energyplus.gov/cfm/weather\_data.cfm These files are in ``macro'' form but it is easy to cut and paste the appropriate definition segments. These files include the location information as well as some locations have \textbf{RunPeriodControl:DaylightSavingTime} objects.
 \end{callout}
 
 \subsubsection{Inputs}\label{inputs-1-024}
@@ -131,13 +131,13 @@ The Humidity Condition Type fields have interacting uses and units, summarized a
 % table 2
 \begin{longtable}[c]{p{2.25in}p{1.75in}p{2.0in}}
 \caption{Humidity Indicating Field Interactions - Design Day \label{table:humidity-indicating-field-interactions-design}} \tabularnewline
-\toprule 
+\toprule
 Humidity Condition Type & Primary Humidity Indicating Field & Humidity Indicating Day Schedule \tabularnewline
 \midrule
 \endfirsthead
 
 \caption[]{Humidity Indicating Field Interactions - Design Day} \tabularnewline
-\toprule 
+\toprule
 Humidity Condition Type & Primary Humidity Indicating Field & Humidity Indicating Day Schedule \tabularnewline
 \midrule
 \endhead
@@ -243,7 +243,7 @@ Optical depth for diffuse radiation, used only when Solar Model Indicator is ASH
 
 \paragraph{Field: Sky Clearness}\label{field-sky-clearness}
 
-If the choice in the Solar Model Indicator field is ASHRAEClearSky or ZhangHuang, then this numeric field should be entered. This value represents the ``clearness'' value for the day. This value, along with the solar position as defined by the Location information and the date entered for the design day, help define the solar radiation values for each hour of the day. Clearness may range from 0.0 to 1.2, where 1.0 represents a clear sky at sea level. Values greater than 1.0 may be used for high altitude locations. Traditionally, one uses 0.0 clearness for Winter Design Days. Note that this ``sky clearness'' does not have the same meaning as output variable ``Site Daylighting Model Sky Clearness''.
+If the choice in the Solar Model Indicator field is ASHRAEClearSky or ZhangHuang, then this numeric field should be entered. This value represents the ``clearness'' value for the day. This value, along with the solar position as defined by the Location information and the date entered for the design day, help define the solar radiation values for each hour of the day. Clearness may range from 0.0 to 1.2, where 1.0 represents a clear sky at sea level. Values greated than 1.0 may be used for high altitude locations. Traditionally, one uses 0.0 clearness for Winter Design Days. Note that this ``sky clearness'' does not have the same meaning as output variable ``Site Daylighting Model Sky Clearness''.
 
 IDF Examples:
 
@@ -348,17 +348,17 @@ This schedule value is active when any Design Day objects have / use the solar s
 
 \paragraph{Sizing Period Site Humidity Condition Schedule Value {[}\%{]}}\label{sizing-period-site-humidity-condition-schedule-value}
 
-\paragraph{Sizing Period Site Humidity Condition Schedule Value {[]}}\label{sizing-period-site-humidity-condition-schedule-value-1}
+\paragraph{\texorpdfstring{Sizing Period Site Humidity Condition Schedule Value {[]}}{Sizing Period Site Humidity Condition Schedule Value }}\label{sizing-period-site-humidity-condition-schedule-value-1}
 
 This schedule value is active when any Design Day objects have / use the humidity schedule option. For those objects that don't have this option, the value will be displayed as -999.
 
-\paragraph{Sizing Period Site Drybulb Temperature Range Modifier Schedule Value {[]}}\label{sizing-period-site-drybulb-temperature-range-modifier-schedule-value}
+\paragraph{\texorpdfstring{Sizing Period Site Drybulb Temperature Range Modifier Schedule Value {[]}}{Sizing Period Site Drybulb Temperature Range Modifier Schedule Value }}\label{sizing-period-site-drybulb-temperature-range-modifier-schedule-value}
 
 \paragraph{Sizing Period Site Drybulb Temperature Range Modifier Schedule Value {[}deltaC{]}}\label{sizing-period-site-drybulb-temperature-range-modifier-schedule-value-deltac}
 
 \paragraph{Sizing Period Site Drybulb Temperature Range Modifier Schedule Value {[}C{]}}\label{sizing-period-site-drybulb-temperature-range-modifier-schedule-value-c}
 
-This schedule value is active when any Design Day objects have / use the drybulb temperature range modifier schedule option. For those objects that don't have this option, the value will be displayed as -999.
+This schedule value is active when any Design Day objects have / use the drybulb temperature range modifier chedule option. For those objects that don't have this option, the value will be displayed as -999.
 
 \paragraph{Sizing Period Site Sky Temperature Schedule Value {[}deltaC{]}}\label{sizing-period-site-sky-temperature-schedule-value-deltac}
 
@@ -509,7 +509,7 @@ The RunPeriod object describes the elements necessary to create a weather file s
 
 \paragraph{Field: Name}\label{field-name-4-015}
 
-This optional field allows the RunPeriod to be named for output reporting. When left blank, the weather file location name is used. Note that the weather file location name will be appended to this name in tabular/summary reports.
+This optional field allows the RunPeriod to be named for output reporting. When left blank, the weather file location name is used. Note that the weather file location name will be appened to this name in tabular/summary reports.
 
 \paragraph{Field: Begin Month}\label{field-begin-month-1}
 
@@ -613,7 +613,7 @@ The RunPeriod:CustomRange object describes the elements necessary to use a speci
 
 \paragraph{Field: Name}\label{field-name-5-012}
 
-This optional field allows the RunPeriod to be named for output reporting. When left blank, the weather file location name is used. Note that the weather file location name will be appended to this name in tabular/summary reports.
+This optional field allows the RunPeriod to be named for output reporting. When left blank, the weather file location name is used. Note that the weather file location name will be appened to this name in tabular/summary reports.
 
 \paragraph{Field: Begin Month}\label{field-begin-month-2}
 
@@ -694,13 +694,13 @@ This field is the starting date for the special day period. Dates in this field 
 % table 3
 \begin{longtable}[c]{@{}ll@{}}
 \caption{Date Field Interpretation \label{table:date-field-interpretation}} \tabularnewline
-\toprule 
+\toprule
 Field Contents & Interpretation \tabularnewline
 \midrule
 \endfirsthead
 
 \caption[]{Date Field Interpretation} \tabularnewline
-\toprule 
+\toprule
 Field Contents & Interpretation \tabularnewline
 \midrule
 \endhead
@@ -771,7 +771,7 @@ Of course, these could not all appear in the same IDF as only one DaylightSaving
 
 \subsection{WeatherProperty:SkyTemperature}\label{weatherpropertyskytemperature}
 
-Sky Temperature, or radiative sky temperature, is internally calculated by EnergyPlus using an algorithm using horizontal infrared radiation from sky, cloudiness factors and current temperature. The algorithm is fully described in the Engineering Reference document. For flexibility, the following object can be entered to override the internal calculations. Much of the literature describes the sky temperature as relative to either drybulb or dewpoint temperature.
+Sky Temperature, or radiative sky temperature, is internally calculated by EnergyPlus using an algorithm using horizontal infrared radiation from sky, cloudiness factors and current temperaure. The algorithm is fully described in the Engineering Reference document. For flexibility, the following object can be entered to override the internal calculations. Much of the literature describes the sky temperature as relative to either drybulb or dewpoint temperature.
 
 \subsubsection{Inputs}\label{inputs-8-011}
 
@@ -791,7 +791,7 @@ An example of IDF usage (with DesignDay):
 
 \begin{lstlisting}
 SizingPeriod:DesignDay,
-  DENVER_STAPLETON Ann Clg 1% Sky Temperature modifier,  !- Name
+  DENVER_STAPLETON Ann Clg 1% Sky Temperature modfier,  !- Name
   32.6,              !- Maximum Dry-Bulb Temperature {C}
   15.2,              !- Daily Temperature Range {deltaC}
   15.5,              !- Humidity Indicating Conditions at Maximum Dry-Bulb
@@ -811,7 +811,7 @@ SizingPeriod:DesignDay,
   temp range deltas; !- Dry-Bulb Temperature Range Modifier Schedule Name
 
 WeatherProperty:SkyTemperature,
-  DENVER_STAPLETON Ann Clg 1% Sky Temperature modifier, !- Name
+  DENVER_STAPLETON Ann Clg 1% Sky Temperature modfier, !- Name
   ScheduleValue,     !- Calculation Type
   DaySchedule5;      !- Schedule Name
 
@@ -847,13 +847,13 @@ The \textbf{Site:WeatherStation} object is useful when working with a custom wea
 % table 4
 \begin{longtable}[c]{@{}lll@{}}
 \caption{Wind Speed Profile Coefficients (ASHRAE Fundamentals 2005). \label{table:wind-speed-profile-coefficients-ashrae}} \tabularnewline
-\toprule 
-Terrain Description & Exponent & Boundary Layer Thickness (m) \tabularnewline
+\toprule
+Terrain Description & Exponent & Bounhary Layer Thickness (m) \tabularnewline
 \midrule
 \endfirsthead
 
 \caption[]{Wind Speed Profile Coefficients (ASHRAE Fundamentals 2005).} \tabularnewline
-\toprule 
+\toprule
 Terrain Description & Exponent & Bounhary Layer Thickness (m) \tabularnewline
 \midrule
 \endhead
@@ -907,13 +907,13 @@ The Site:HeightVariation object is used to specify the local variation in atmosp
 % table 5
 \begin{longtable}[c]{@{}lllll@{}}
 \caption{Atmospheric Variables at Two Different Heights Above Ground Level. \label{table:atmospheric-variables-at-two-different}} \tabularnewline
-\toprule 
+\toprule
 Variable & 1.5 m & 284 m & Absolute Diff & Percent Diff \tabularnewline
 \midrule
 \endfirsthead
 
 \caption[]{Atmospheric Variables at Two Different Heights Above Ground Level.} \tabularnewline
-\toprule 
+\toprule
 Variable & 1.5 m & 284 m & Absolute Diff & Percent Diff \tabularnewline
 \midrule
 \endhead
@@ -1015,7 +1015,7 @@ Site:GroundTemperature:Deep,  16,16,16,16,16,16,16,16,16,16,16,16;
 
 \subsection{Site:GroundTemperature:Undisturbed:FiniteDifference}\label{sitegroundtemperatureundisturbedfinitedifference}
 
-Site:GroundTemperature:Undisturbed:FiniteDifference may be used by all objects requiring ``undisturbed'' ground temperatures. The object uses a 1D finite difference heat transfer model which uses the weather file to obtain surface boundary conditions. An annual simulation is run on the model during it's initialization until the annual ground temperature profile has reached steady periodic behavior. Once steady periodic behavior is reached, the ground temperatures are cached for retrieval during the rest of the simulation.
+Site:GroundTemperature:Undisturbed:FiniteDifference may be used by all objects requiring ``undisturbed'' ground temperatures. The object uses a 1D finite difference heat transfer model which uses the weather file to obtain surface boundary conditions. An annual simulation is run on the model during it's initialization until the annual ground temperature profile has reached steady periodic behavior. Once steady periodic behavior is reached, the ground tempeatures are cached for retrieval during the rest of the simulation.
 
 \subsubsection{Inputs}\label{inputs-14-007}
 
@@ -1052,11 +1052,11 @@ Site:GroundTemperature:Undisturbed:FiniteDifference,
   962,      !- Soil Density {kg/m3}
   2576,     !- Soil Specific Heat {J/kg-K}
   30,       !- Soil Moisture Content Volume Fraction {percent}
-  50,       !- Soil Moisture Content Volume Fraction at Saturation {percent} 
+  50,       !- Soil Moisture Content Volume Fraction at Saturation {percent}
   0.408;    !- Evapotranspiration Ground Cover Parameter
 \end{lstlisting}
 
-\subsection{Site:GroundTemperature:Undisturbed:KusudaAchenbach}\label{sitegroundtemperatureundisturbedkusudaachenbach}
+\subsection{Site:GroundTemperature:Undisturbed:KusduaAchenbach}\label{sitegroundtemperatureundisturbedkusduaachenbach}
 
 Site:GroundTemperature:Undisturbed:KusudaAchenbach may be used by all objects requiring ``undisturbed'' ground temperatures. It provides an undisturbed ground temperature based on the correlation developed by Kusuda T. and P. Achenbach. 1965. The correlation uses three parameters for ground temperature at the surface to define a correlation for undisturbed ground temperatures as a function of depth and time. If one thinks of the ground temperature for a given depth as a sinusoid, the average ground temperature, amplitude (average difference between maximum ground temperature and minimum ground temperature), and the phase shift (day of minimum surface temperature) are all required to define the correlation.
 
@@ -1519,6 +1519,188 @@ This is the value of the heat flux provided to ground domain as a boundary condi
 
 This is the value of the SurfaceProperty:OtherSideConditionsModel surface temperature. This is the temperature provided to the ground coupled floor surfaces as an outside boundary condition.
 
+
+
+\subsection{Site:GroundDomain:BASESIMP}\label{sitegrounddomainbasesimp}
+
+This section documents the BASESIMP object which can be used to simulate basements and slab-in-grade foundations within EnergyPlus. Zones within EnergyPlus interact with the Site:GroundDomain:BASESIMP object; which evaluates the heat losses from the foundation and extracts this heat from the zone in the form of a negative internal gain. As a result, the Zone object representing the zone affected by the foundation should not include the surfaces (walls/floors) of the foundation.  If these surfaces are modelled, an adiabatic boundary condition should be imposed on them.  Since the resulting surface may not form en enclosed zone, the Zone object should include the correct floor area, height, and volume.
+
+BASESIMP models can be defined with two methods, specified with a ``Model Type" parameter: the user can supply coefficients calculated with a software named BASECALC or a description of the foundation.  Seven parameters are read for all foundations: the foundation name, the name of the affected building zone, the model type, the fraction of the losses calculated by BASESIMP to be extracted from the zone, and three parameters describing the soil surface temperature ($T_{g,avg}$, $T_{g,amp}$, and $T_{g,ps}$).  If the model is of the type ``BASECALC coefficients", four BASECALC coefficients ($S_{ag}$, $S_{bg, avg}$, $S_{bg, var}$, and $Phase$) are read.  If it is of type ``Foundation description" then a variable number of parameters may be read depending on the foundation configuration: w/wo insulation, w/wo overlap, etc.
+
+Table \ref{table:BSFoundationParameters} presents the requirements for both types of models.  An ``x" signifies that a value is required in the field associated with the parameter in the BASESIMP object representing the modelled foundation.
+
+\begin{longtable}{lcc}
+\hline
+\textbf{Parameter }             & \textbf{Foundation description}   & \textbf{BASECALC coef.}     \\
+\hline
+\hline
+Name                            & x                                 & x                         \\
+Zone name                       & x                                 & x                         \\
+Model Type                      & x                                 & x                         \\
+Foundation type                 & x                                 &                           \\
+Foundation material             & x                                 &                           \\
+                                & Must be concrete for slabs        &                           \\
+BSConfig(Conc B)                & If concrete basement              &                           \\
+BSConfig(Wood B)                & If wood basement                  &                           \\
+BSConfig(Wood\&Conc B)          & If wood\&concrete basement     &                           \\
+BSConfig(Concrete S)            & If slab-in-grade                  &                           \\
+BASESIMP Fraction               & x                                 & x                         \\
+Foundation height               & x                                 &                           \\
+Foundation depth                & x                                 &                           \\
+Foundation length               & x                                 &                           \\
+Foundation width                & x                                 &                           \\
+Wall insulation overlap         & If overlap in config              &                           \\
+Insulation resistance           & If insulation in config           &                           \\
+Soil thermal conductivity       & x                                 &                           \\
+Water table depth               & x                                 &                           \\
+AG losses coef                  &                                   & x                         \\
+BGavg coef                      &                                   & x                         \\
+BGvar coef                      &                                   & x                         \\
+Thermal response ($Phase$)      &                                   & x                         \\
+Average ground temperature      & x                                 & x                         \\
+Temperature variation amplitude & x                                 & x                         \\
+Phase lag ($T_{g,ps}$)          & x                                 & x                         \\
+\hline
+\caption{Required parameters for the two model types} \label{table:BSFoundationParameters}
+\end{longtable}
+
+
+\subsubsection{Inputs}\label{inputs-basesimp}
+
+\paragraph{Field: Name}\label{field-name-basesimp}
+
+Alpha field used as a unique identifier for each foundation. Multiple foundations can be simulated simultaneously but each must have a unique name. Note that, when modelling multiple foundations in a same model, the interactions between these foundations are not accounted for.  This field is required for all modelled foundations.
+
+\paragraph{Field: Zone Name}\label{field-zonename-basesimp}
+
+Alpha field used to specify the zone affected by the foundation heat losses. Again, this zone must not include surfaces (walls/floors) representing the foundation and the Zone object representing it must include the correct floor area, height, and volume.  This field is required for all modelled foundations.
+
+\paragraph{Field: Model Type}\label{field-modeltype-basesimp}
+
+Alpha field used to specify the type of data used to describe the foundation.  This can be either as ``BASECALC coefficients" or as a ``Foundation description".  The required parameters for the different model types are specified in Table \ref{table:BSFoundationParameters}.  This field is required for all modelled foundations.
+
+\paragraph{Field: Foundation type}\label{field-foundationtype-basesimp}
+
+Alpha field used to specify the type of foundation being modelled.  This can be either a ``basement" or a ``slab-in-grade" foundation.  This field is required when the model type is ``Foundation description".
+
+\paragraph{Field: Foundation material}\label{field-foundationmaterial-basesimp}
+
+Alpha field used to specify the material of the foundation being modelled.  This can be either ``concrete", ``wood", or ``wood\&concrete": i.e. a combination.  This field is required when the model type is ``Foundation description".  When the foundation type is slab-in-grade, ``Concrete" must be specified in this field.
+
+\paragraph{Field: BSConfig (Concrete basement)}\label{field-configconcbasement-basesimp}
+
+Alpha field used to specify the configuration of the foundation being modelled.  This can be any of the concrete basement configurations listed in Figures \ref{fig:UninsulatedBasements} to \ref{fig:concBasementIntExtAboveIns} from Appendix B of this document.  This field is required when the model type is ``Foundation description", the foundation type is ``Basement", and the foundation material is ``Concrete".
+
+\paragraph{Field: BSConfig (Wood basement)}\label{field-configwoodbasement-basesimp}
+
+Alpha field used to specify the configuration of the foundation being modelled.  This can be any of the wood basement configurations listed in Figure \ref{fig:woodBasementsConfig} from Appendix B of this document.  This field is required when the model type is ``Foundation description", the foundation type is ``Basement", and the foundation material is ``Wood".
+
+\paragraph{Field: BSConfig (Wood\&Concrete basement)}\label{field-configmixtbasement-basesimp}
+
+Alpha field used to specify the configuration of the foundation being modelled.  This can be any of the wood\&concrete basement configurations listed in Figures \ref{fig:mixedBasementsConfigBegin} to \ref{fig:mixedBasementsConfigEnd} from Appendix B of this document.  This field is required when the model type is ``Foundation description", the foundation type is ``Basement", and the foundation material is ``Wood\&Concrete".
+
+\paragraph{Field: BSConfig (Concrete slab-in-grade)}\label{field-configconcslab-basesimp}
+
+Alpha field used to specify the configuration of the foundation being modelled.  This can be any of the slab-in-grade configurations listed in Figures \ref{fig:slabConfigBegin} to \ref{fig:slabConfigEnd} from Appendix B of this document.  This field is required when the model type is ``Foundation description", the foundation type is ``Slab-in-Grade", and the foundation material is ``Concrete".
+
+\paragraph{Field: BASESIMP Fraction}\label{field-basesimpfraction-basesimp}
+
+Numeric field used to specify the fraction of the heat losses calculated by BASESIMP to be extracted from the zone energy balance.  This parameter is to account for parts of foundations that are in contact with other foundations: i.e. parts that are not exposed to the outside.  This parameter is required and its value should be between 0 and 1.
+
+\paragraph{Field: Foundation height}\label{field-foundationheight-basesimp}
+
+Numeric field used to specify the height (m) of the foundation including the below and above grade parts.  This field is required when the model type is ``Foundation description".  Its value should be between 1 and 2.5 m.
+
+\paragraph{Field: Foundation depth}\label{field-foundationdepth-basesimp}
+
+Numeric field used to specify the depth (m), or height below grade, of the foundation.  This field is required when the model type is ``Foundation description".  Its value should be between 0 and 2.4 m.  For a slab-in-grade foundations, the value should be lower than 0.05 m.  For basements, it should be larger than 0.65 m.
+
+\paragraph{Field: Foundation length}\label{field-foundationlength-basesimp}
+
+Numeric field used to specify the length (m), or larger side, of the foundation footprint.  This field is required when the model type is ``Foundation description".  Its value should be between 5 and 100 m.
+
+\paragraph{Field: Foundation width}\label{field-foundationwidth-basesimp}
+
+Numeric field used to specify the width (m), or shorter side, of the foundation footprint.  This field is required when the model type is ``Foundation description".  Its value should be between 1 and 25 m and be smaller than the length.
+
+\paragraph{Field: Wall insulation overlap}\label{field-insulationoverlap-basesimp}
+
+Numeric field used to specify the wall height (m) along which interior and exterior insulations overlap.  This field is required when the model type is ``Foundation description", the foundation type is a ``Basement", and the selected configuration involves user specified overlapping insulation: configurations BCCN-1, BCCN-2, and BCCA-1.  Its value should be lower than the foundation depth.
+
+\paragraph{Field: Insulation resistance}\label{field-insulationresistance-basesimp}
+
+Numeric field used to specify the resistance ($m^2K/W$) of the insulations.  This field is required when the model type is ``Foundation description" and the selected configuration includes insulation.  Its value should be between 0 and 9 RSI.
+
+\paragraph{Field: Soil thermal conductivity}\label{field-soilthermalconductivity-basesimp}
+
+Numeric field used to specify the thermal conductivity ($W/mK$) of the soil.  This field is required when the model type is ``Foundation description".  Its value should be between 0.85 and 1.9 $W/mK$.
+
+\paragraph{Field: Water table depth}\label{field-watertabledepth-basesimp}
+
+Numeric field used to specify the depth (m) at which the water table is located.  This field is required when the model type is ``Foundation description".  Its value should be between 5 and 15 m.
+
+\paragraph{Field: AG losses coef}\label{field-agcoeff-basesimp}
+
+Numeric field used to specify the BASECALC factor (W/K) for above grade heat losses.  This field is required when the model type is ``BASECALC coefficients".
+
+\paragraph{Field: BGavg coef}\label{field-bgavgcoeff-basesimp}
+
+Numeric field used to specify the BASECALC factor (W/K) for average (or constant) below grade heat losses.  This field is required when the model type is ``BASECALC coefficients".
+
+\paragraph{Field: BGvar coef}\label{field-bgvarcoeff-basesimp}
+
+Numeric field used to specify the BASECALC factor (W/K) for harmonic (or variable) below grade heat losses.  This field is required when the model type is ``BASECALC coefficients".
+
+\paragraph{Field: Thermal response}\label{field-thermalresponse-basesimp}
+
+Numeric field used to specify the phase lag (rad) representing the thermal response of the foundation-soil system.  This field is required when the model type is ``BASECALC coefficients".
+
+\paragraph{Field: Average ground temperature}\label{field-averagegroundtemp-basesimp}
+
+Numeric field used to specify the average temperature ($^{\circ}C$) of the ground surface.  This field is required.
+
+\paragraph{Field: Temperature variation amplitude}\label{field-tempvariationampl-basesimp}
+
+Numeric field used to specify the amplitude ($^{\circ}C$) of the ground surface temperature variation.  This field is required.
+
+\paragraph{Field: Phase lag}\label{field-phaselag-basesimp}
+
+Numeric field used to specify the phase lag (rad) representing the period between January first and the time when the lowest ground surface temperature is observed.  This field is required.
+
+\subsubsection{Outputs}\label{outputs-basesimp}
+
+The ``Foundation heat losses" is the only available output variables.
+
+\paragraph{Foundation heat losses {[}W{]}}\label{BSFoundation-heat-losses-w}
+
+This is the value of the heat losses from the foundation. This also represents the heat extracted from the zone affected to the foundation in the BASESIMP object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection{Site:GroundTemperature:FCfactorMethod}\label{sitegroundtemperaturefcfactormethod}
 
 Site:GroundTemperature:FCfactorMethod is used only by the underground walls or slabs-on-grade or underground floors defined with C-factor (Construction:CfactorUndergroundWall) and F-factor (Construction:FfactorGroundFloor) method for code compliance calculations where detailed construction layers are unknown. Only one such ground temperature object can be included. The monthly ground temperatures for this object are close to the monthly outside air temperatures delayed by three months. If user does not input this object in the IDF file, it will be defaulted to the 0.5m set of monthly ground temperatures from the weather file if they are available. Entering these will also overwrite any ground temperatures from the weather file in the F and C factor usage. If neither is available, an error will result.
@@ -1665,7 +1847,7 @@ A set of schedules for site precipitation have been developed for USA weather lo
 \right.
 \end{equation}
 
-The values were inserted on hour by hour basis for the month based on the observations. Then each month was rescaled to meet the average precipitation for the month based on the 30-year average (1971-2000) provided by the NOAA/NCDC. Therefore, the flags in the EPW file match the precipitation schedules for the USA. Note that summing the average monthly precipitation values will not give you the average yearly precipitation. The resulting value may be lower or higher than the average yearly value.
+The values were inserted on hour by hour basis for the month based on the observations. Then each month was rescaled to meet the average precipitation for the month based on the 30-year average (1971-2000) provided by the NOAA/NCDC. Therefore, the flags in the EPW file match the precipitation schedules for the USA. Note that summing the average monthly precipitation values will not give you the average yearly precipitiation. The resulting value may be lower or higher than the average yearly value.
 
 Once the typical rainfall pattern and rates are scheduled, the Site:Precipitation object provides a method of shifting the total rainfall up or down for design purposes. Wetter or drier conditions can be modeled by changing the Design Annual Precipitation although the timing of precipitation throughout the year will not be changed.
 
@@ -1985,7 +2167,7 @@ The Site Simple Factor Model Ground Temperature is reported in degrees C -- this
 
 \paragraph{Site Outdoor Air Enthalpy {[}J/kg{]}}\label{site-outdoor-air-enthalpy-jkg}
 
-Outdoor enthalpy is derived at each timestep from the Site Outdoor Air Drybulb Temperature and the Site Outdoor Air Humidity Ratio. It is reported in J/kg.
+Outdoor enthalpy is derived at each timestep from the Site Outdoor Air Drybulb Temperatureand the Site Outdoor Air Humidity Ratio. It is reported in J/kg.
 
 \paragraph{Site Outdoor Air Density {[}kg/m3{]}}\label{site-outdoor-air-density-kgm3}
 
@@ -2012,13 +2194,13 @@ The Solar Hour Angle (\emph{H}) gives the apparent solar time for the current ti
 % table 6
 \begin{longtable}[c]{@{}ll@{}}
 \caption{Relationship of Angles (degrees) to Time \label{table:relationship-of-angles-degrees-to-time}} \tabularnewline
-\toprule 
+\toprule
 Unit of Angle & Equivalent time \tabularnewline
 \midrule
 \endfirsthead
 
 \caption[]{Relationship of Angles (degrees) to Time} \tabularnewline
-\toprule 
+\toprule
 Unit of Angle & Equivalent time \tabularnewline
 \midrule
 \endhead
@@ -2030,21 +2212,21 @@ Unit of Angle & Equivalent time \tabularnewline
 \bottomrule
 \end{longtable}
 
-\paragraph{Site Rain Status {[]}}\label{site-rain-status}
+\paragraph{\texorpdfstring{Site Rain Status {[]}}{Site Rain Status }}\label{site-rain-status}
 
 This field shows whether or not (1 = yes, 0 = no) the weather shows ``raining''. For a Design Day, one can denote rain for the entire day but not timestep by timestep. Weather files may indicate rain for a single time interval. This is an ``averaged'' field -- thus a 1 shown for a time period (e.g. daily reporting) means that it was raining during each timestep of that period.
 
-\paragraph{Site Snow on Ground Status {[]}}\label{site-snow-on-ground-status}
+\paragraph{\texorpdfstring{Site Snow on Ground Status {[]}}{Site Snow on Ground Status }}\label{site-snow-on-ground-status}
 
 This field shows whether or not (1 = yes, 0 = no) the weather shows ``snow on the ground''. For a Design Day, one can denote snow for the entire day but not timestep by timestep. Weather files may indicate snow (snow depth) for a single time interval. This is an ``averaged'' field -- thus a 1 shown for a time period (e.g. daily reporting) means that there was snow on the ground during each timestep of that period.
 
-\paragraph{Site Daylight Saving Time Status {[]}}\label{site-daylight-saving-time-status}
+\paragraph{\texorpdfstring{Site Daylight Saving Time Status {[]}}{Site Daylight Saving Time Status }}\label{site-daylight-saving-time-status}
 
 This field shows when daylight saving time (1 = yes, 0 = no) is in effect. Though shown as an average variable, this value is only set on a daily basis.
 
-\paragraph{Site Day Type Index {[]}}\label{site-day-type-index}
+\paragraph{\texorpdfstring{Site Day Type Index {[]}}{Site Day Type Index }}\label{site-day-type-index}
 
-This field shows what ``day type'' the current day is. Day types are (1 = Sunday, 2 = Monday, etc.) with Holiday = 8, SummerDesignDay = 9, WinterDesignDay = 10, CustomDay1 = 11, CustomDay2 = 12. Though shown as an average variable, this value is only set on a daily basis.
+This field shows what ``day type'' the current day is. Daytypes are (1 = Sunday, 2 = Monday, etc.) with Holiday = 8, SummerDesignDay = 9, WinterDesignDay = 10, CustomDay1 = 11, CustomDay2 = 12. Though shown as an average variable, this value is only set on a daily basis.
 
 \paragraph{Site Mains Water Temperature {[}C{]}}\label{site-mains-water-temperature-c}
 
@@ -2054,7 +2236,7 @@ The value of the Water Mains Temperature is reported in C following the calculat
 
 \paragraph{Site Precipitation Depth {[}m{]}}\label{site-precipitation-depth-m-1}
 
-The rate and quantity of precipitation at the site. These outputs are only available if a Site Precipitation object is used. Precipitation is measured in meters.
+The rate and quantity of precipitation at the site. These outputs are only available if a Site Precipication object is used. Precipitation is measured in meters.
 
 \paragraph{Water System Roof Irrigation Scheduled Depth{[}m{]}}\label{water-system-roof-irrigation-scheduled-depthm}
 
