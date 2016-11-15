@@ -22,6 +22,8 @@ SET( SRC
   BaseboardElectric.hh
   BaseboardRadiator.cc
   BaseboardRadiator.hh
+  BaseSimp.hh
+  BaseSimp.cc
   BoilerSteam.cc
   BoilerSteam.hh
   Boilers.cc
