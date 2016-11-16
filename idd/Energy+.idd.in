@@ -2125,6 +2125,307 @@ Site:GroundDomain:Basement,
         \type integer
         \default 4
         \minimum 2
+Site:GroundDomain:BASESIMP,
+        \memo Model for residential building foundations
+   A1,  \field Name
+        \required-field
+        \note The name of the foundation.
+   A2,  \field Zone Name
+        \required-field
+        \type object-list
+        \object-list ZoneAndZoneListNames
+        \note The zone impacted by heat losses from this foundation.
+   A3,  \field Model Type
+   	\required-field
+        \type choice
+   	\key Foundation description
+   	\key BASECALC coefficients
+      	\default Foundation description
+      	\note The model can use coefficients from the BASECALC software or calculate these coefficients for pre-defined configuration (description).
+       	\required-field
+   A4,	\field Foundation type      
+        \type choice
+	\key Basement
+	\key Slab-in-grade
+       	\note Required (mandatory) only if model type = Foundation description.
+   A5, 	\field Foundation material      
+        \type choice
+   	\key Concrete
+   	\key Wood
+   	\key Concrete & Wood
+        \note Required (mandatory) only if model type = Foundation description.
+   A6, 	\field BSConfig (Concrete basement)
+        \type choice
+   	\key BCIN_1 !conc Wl&Fl; intrn ins full-height; *any constr
+	\key BCIN_2 !conc Wl&Fl; intrn ins to 0.2 above floor; *any constr
+	\key BCIN_3 !conc Wl&Fl; intrn ins to 0.6 below grade; *brick veneer
+	\key BCIN_4 !conc Wl&Fl; intrn ins to 0.6 below grade; *non-brick veneer
+	\key BCEN_1 !conc Wl&Fl; extrn ins full-height; *brick veneer
+	\key BCEN_2 !conc Wl&Fl; extrn ins full-height; *non-brick veneer
+	\key BCEN_3 !conc Wl&Fl; extrn ins below grade; *brick veneer
+	\key BCEN_4 !conc Wl&Fl; extrn ins below grade; *non-brick veneer
+	\key BCNN_1 !conc Wl&Fl; no ins; *brick veneer
+	\key BCNN_2 !conc Wl&Fl; no ins; *non-brick veneer
+	\key BCCN_1 !conc Wl&Fl; extrn below grade with overlap; *brick on wall
+	\key BCCN_2 !conc Wl&Fl; extrn below grade with overlap; *non-brick
+ 	\key BCIB_1 !conc Wl&Fl; intrn ins full; ins sub-surface; *any constr
+	\key BCIB_2 !conc Wl&Fl; intrn ins full; 0.6m perm floor ins; *any constr
+	\key BCIB_3 !conc Wl&Fl; intrn ins full; 1.0m perm floor ins; *any constr
+	\key BCIB_4 !conc Wl&Fl; intrn ins full; full floor ins; *any constr
+	\key BCIB_5 !conc Wl&Fl; intrn ins full; 0.6m perm floor ins; TB; *any
+	\key BCIB_6 !conc Wl&Fl; intrn ins full; 1.0m perm floor ins; TB; *any
+	\key BCEB_1 !conc Wl&Fl; extrn ins full; full floor ins; *any constr
+	\key BCEB_2 !conc Wl&Fl; extrn ins full; 0.6m perm floor ins; *any constr
+	\key BCEB_3 !conc Wl&Fl; extrn ins full; 1.0m perm floor ins; *any constr
+	\key BCCN_3 !conc Wl&Fl; no slab ins; TB; full ins both sides; *any
+	\key BCCN_4 !conc Wl&Fl; full slab; TB; full ins both sides; *any constr
+	\key BCEA_1 !conc Wl&Fl; full top slab; extrn ins full; *brick veneer
+	\key BCEA_4 !conc Wl&Fl; full top slab; extrn ins full; *non-brick veneer
+	\key BCIA_1 !conc Wl&Fl; full top slab; intern ins full; *brick veneer
+	\key BCIA_4 !conc Wl&Fl; full top slab; intern ins full; *non-brick
+	\key BCEA_7 !conc Wl&Fl; full top slab; extrn ins blw_grd; *brick on slb
+	\key BCEA_8 !conc Wl&Fl; full top slab; extrn blw_grd; *non-brick veneer
+	\key BCEB_8 !conc Wl&Fl; full slab ins; extrn ins blw_grd; *brick veneer
+	\key BCEB_9 !conc Wl&Fl; full slab ins; TB; extrn 0.6 blw_grd; *non-brick
+	\key BCCB_8 !conc Wl&Fl; 0.6m perm slab; intrn&extrn ins full; *any con
+	\key BCCA_7 !conc Wl&Fl; top slab; intrn full; ext 0.6 blw_grd; *any con
+	\key BCCA_8 !conc Wl&Fl; top slab; intrn above 0.2; extrn full; *any con
+	\key BCCN_4 !conc Wl&Fl; intrn full; extrn 0.6 blw_grd; *any constr
+	\key BCCN_5 !conc Wl&Fl; intrn top to 0.2; extrn ins full; *any constr
+	\key BCEA_5 !conc Wl&Fl; top slab; extrn 0.6 blw_grd; *brick veneer
+	\key BCEA_6 !conc Wl&Fl; top slab; extrn 0.6 blw_grd; *non-brick veneer
+	\key BCEB_4 !conc Wl&Fl; full slab ins; extrn full; *non-brick veneer
+	\key BCEB_5 !conc Wl&Fl; 0.6m perm slab; extrn full; *non-brick veneer
+	\key BCEB_6 !conc Wl&Fl; 1.0m perm slab; extrn full; *non-brick veneer
+	\key BCCB_9 !conc Wl&Fl; full slab; intrn full; extrn 0.6 blw_grd; *any
+	\key BCCB_10 !conc Wl&Fl; 0.6m perm; intrn full; extrn 0.6 blw_grd; *any
+	\key BCCA_1 !conc Wl&Fl; full top; int overlap; extrn blw_grd; *brick
+	\key BCCA_4 !conc Wl&Fl; full top; int overlap; extrn blw_grd; *non-brick
+	\key BCIB_7 !conc Wl&Fl; full slab; TB; intrn 0.6 blw_grd; *brick on wall
+	\key BCIB_8 !conc Wl&Fl; full slab; TB; intrn 0.6 blw_grd; *non-brick
+	\key BCIA_3 !conc Wl&Fl; 1.0m perm top; intrn full; *brick on wall
+	\key BCIA_5 !conc Wl&Fl; 0.6m perm top; intrn 0.6 blw_grd; *brick on wall
+	\key BCIA_6 !conc Wl&Fl; 0.6m perm top; intrn 0.6 blw_grd; *non-brick
+	\key BCIB_9 !conc Wl&Fl; 0.6m perm; TB; intrn 0.6 blw_grd; *brick on wall
+	\key BCIB_10 !conc Wl&Fl; 0.6m perm; TB; intrn 0.6 blw_grd; *non-brick
+	\key BCEB_10 !conc Wl&Fl; 0.6m perm; TB; extrn 0.6 blw_grd; *brick on w
+	\key BCEB_11 !conc Wl&Fl; 0.6m perm; TB; extrn 0.6 blw_grd; *non-brick
+	\key BCEA_3 !conc Wl&Fl; 1.0m perm top; extrn full; *brick on wall
+	\key BCEA_9 !conc Wl&Fl; 1.0m perm top; extrn full; *non-brick
+	\key BCEA_10 !conc Wl&Fl; 0.6m perm top; extrn 0.6 blw_grd; *brick on w
+	\key BCEA_11 !conc Wl&Fl; 0.6m perm top; extrn 0.6 blw_grd; *non-brick
+	\key BCEN_5 !conc Wl&Fl; extrn ins to 0.6 blw_grd; *brick on wall
+	\key BCEN_6 !conc Wl&Fl; extrn ins to 0.6 blw_grd; *non-brick veneer
+   	\note First letter stands for foundation (B=Basement); Second letter stands for material (C=Concrete, W=Wood, B=Both); Third letter stands for wall insulation placement (N=None, I=interior, E=Exterior, C=Combination); Fourth letter stands for slab insulation (N=None, A=Above, B=Below).
+   	\note Required (mandatory) only if model type = Foundation description and th efoundation is a concrete basement.
+   A7, 	\field BSConfig (Wood basement)
+        \type choice
+   	\key BWNN_1 !wood Wl&Fl; no ins; *any constr
+	\key BWIN_1 !wood Wl&Fl; intrn ins full-height; *any constr
+	\key BWIN_2 !wood Wl&Fl; intrn ins to 0.2 above floor; *any constr
+	\key BWIN_3 !wood Wl&Fl; intrn ins to 0.6 below grade; *any constr
+	\key BWEN_1 !wood Wl&Fl; extrn ins full-height; *any constr
+	\key BWEN_2 !wood Wl&Fl; extrn ins below grade; *any constr
+	\key BWEN_3 !wood Wl&Fl; extrn to 0.6 blw_grd; *any constr
+	\key BWIA_1 !wood Wl&Fl; 0.6m perm top floor; intrn full; *any constr
+	\key BWIA_2 !wood Wl&Fl; top floor ins; intrn full; *any constr
+	\key BWIB_1 !wood Wl&Fl; 1.0m perm floor; intrn full; *brick on wall
+	\key BWIB_2 !wood Wl&Fl; full floor; intrn full; *brick on wall
+	\key BWIB_4 !wood Wl&Fl; 0.6m perm floor; intrn full; *brick on wall
+	\key BWIA_3 !wood Wl&Fl; 0.6m perm top; intrn 0.6 blw_grd; *brick on wall
+	\key BWEB_1 !wood Wl&Fl; 1.0m perm floor; extrn full; *brick on wall
+	\key BWEB_2 !wood Wl&Fl; full floor; extrn full; *brick on wall
+	\key BWEB_3 !wood Wl&Fl; 0.6m perm floor; extrn 0.6 blw_grd; *brick on w
+	\key BWEB_4 !wood Wl&Fl; 0.6m perm floor; extrn full; * brick on wall
+   	\note First letter stands for foundation (B=Basement); Second letter stands for material (C=Concrete, W=Wood, B=Both); Third letter stands for wall insulation placement (N=None, I=interior, E=Exterior, C=Combination); Fourth letter stands for slab insulation (N=None, A=Above, B=Below).
+   	\note Required (mandatory) only if model type = Foundation description and the foundation is a wood basement.
+   A8, 	\field BSConfig (Wood&Concrete basement)
+        \type choice
+   	\key BBIB_3 !wood Wl conc Fl; full slab; TB; intrn full; *any constr
+	\key BBIB_4 !wood Wl conc Fl; full slab; TB; intrn 0.6 blw_grd; *brick
+	\key BBEB_1 !wood Wl conc Fl; full slab; extrn 0.6 blw_grd; *brick on w
+	\key BBEN_1 !wood Wl conc Fl; no slab; extrn full; *brick on wall
+	\key BBEN_2 !wood Wl conc Fl; no slab; extrn 0.6 blw_grd; *brick on wal
+	\key BBIA_2 !wood Wl conc Fl; top slab; intrn ins full; *any constr
+	\key BBIN_2 !wood Wl conc Fl; intrn to 0.6 blw_grd; *non-brick veneer
+	\key BBIN_1 !wood Wl conc Fl; intrn ins full; *non-brick veneer
+	\key BBIA_1 !wood Wl conc Fl; top slab; intrn full; *any constr
+	\key BBIB_1 !wood Wl conc Fl; 0.6m perm slab; intrn full; *any constr
+	\key BBIB_2 !wood Wl conc Fl; full slab; intrn full; *any constr
+	\key BBEB_2 !wood W conc F; full slab; TB; extrn 0.6 blw_grd; *brick on w
+	\key BBIB_5 !wood Wl conc Fl; 1.0m perm; intrn ins full; *brick on wall
+	\key BBIB_6 !wood Wl conc Fl; 1.0m perm; intrn 0.6 blw_grd; *brick on w
+	\key BBEB_3 !wood Wl conc Fl; 1.0m perm; extrn full;* brick on wall
+	\key BBEB_4 !wood Wl conc Fl; 0.6m perm; extrn full; *brick on wall
+	\key BBEB_5 !wood Wl conc Fl; 0.6m perm; extrn 0.6 blw_grd; *brick on w
+	\key BBEA_2 !wood Wl conc Fl; full top slab; extrn full; *brick on wall
+   	\note First letter stands for foundation (B=Basement); Second letter stands for material (C=Concrete, W=Wood, B=Both); Third letter stands for wall insulation placement (N=None, I=interior, E=Exterior, C=Combination); Fourth letter stands for slab insulation (N=None, A=Above, B=Below).
+   	\note Required (mandatory) only if model type = Foundation description and the foundation is a concrete&wood basement.
+   A9, 	\field BSConfig (Concrete slab-in-grade)
+        \type choice
+	\key SCN_1 !conc/soil FL; no ins; *non-brick veneer
+	\key SCN_2 !conc/soil FL; no ins; *brick on slab
+	\key SCN_3 !conc/soil FL; no ins; TB; *non-brick veneer
+	\key SCN_4 !conc/soil FL; no ins; TB; *brick veneer 
+	\key SCN_7 !conc/soil FL; no ins; vert skirt; *non-brick veneer
+	\key SCN_8 !conc/soil FL; no ins; vert skirt; TB; *brick veneer 
+	\key SCB_1 !conc/soil FL; 0.6m perm slab ins; *non-brick veneer
+	\key SCB_2 !conc/soil FL; 0.6m perm slab ins; *brick on slab
+	\key SCB_3 !conc/soil FL; 0.6m perm slab & footing ins; *non-brick veneer
+	\key SCB_4 !conc/soil FL; 0.6m perm slab & footing ins; *brick on slab
+	\key SCB_5 !conc/soil FL; no slab or footing ins; TB; *non-brick veneer
+	\key SCB_6 !conc/soil FL; no slab or footing ins; TB; *brick on slab
+	\key SCB_9 !conc/soil FL; 0.6m perm slab ins; TB; vert skirt; *non-brick
+	\key SCB_10 !conc/soil FL; 0.6m perm slab; TB; vert skirt;  *brick on slb
+	\key SCB_11 !conc/soil FL; 0.6m perm slab; horiz skirt; *non-brick veneer
+	\key SCB_12 !conc/soil FL; 0.6m perm slab; horiz skirt; *brick on slab
+	\key SCB_13 !conc/soil FL; 1.0m perm slab; horiz skirt; *brick on slab
+	\key SCB_14 !conc/soil FL; 1.0m perm slab; *brick on slab
+	\key SCB_17 !conc/soil FL; 1.0m perm slab; TB; *non-brick veneer
+	\key SCB_18 !conc/soil FL; 1.0m perm slab; TB; *brick on slab
+	\key SCB_21 !conc/soil FL; 1.0m perm slab; TB; vert skirt; *non-brick
+	\key SCB_22 !conc/soil FL; 1.0m perm slab; TB; vert skirt; *brick on slb
+	\key SCB_23 !conc/soil FL; 1.0m perm slab; TB; horiz skirt; *non-brick
+	\key SCB_24 !conc/soil FL; 1.0m perm slab; TB; horiz skirt; *brick on slb
+	\key SCB_25 !conc/soil FL; full slab ins; *non-brick veneer
+	\key SCB_26 !conc/soil FL; full slab ins; *brick on slab
+	\key SCB_29 !conc/soil FL; full slab ins; TB; *non-brick veneer
+	\key SCB_30 !conc/soil FL; full slab ins; TB; *brick on slab
+	\key SCB_33 !conc/soil FL; full slab ins; TB; vert skirt; *non-brick
+	\key SCB_34 !conc/soil FL; full slab ins; TB; vert skirt; *brick on slab
+	\key SCB_35 !conc/soil FL; full slab ins; horiz skirt; *non-brick veneer
+	\key SCB_36 !conc/soil FL; full slab ins; horiz skirt; *brick on slab
+	\key SCA_17 !conc/soil FL; full top slab; *non-brick veneer
+	\key SCA_18 !conc/soil FL; full top slab; *brick on slab
+	\key SCA_19 !conc/soil FL; full top slab; TB; *non-brick veneer
+	\key SCA_20 !conc/soil FL; full top slab; TB; *brick on slab
+	\key SCA_21 !conc/soil FL; full top slab; TB; vert skirt; *non-brick venr
+	\key SCA_22 !conc/soil FL; full top slab; TB; vert skirt; *brick on slab
+	\key SCA_23 !conc/soil FL; full top slab; TB; horiz skirt; *non-brick
+	\key SCA_24 !conc/soil FL; full top slab; TB; horiz skirt; brick on slab
+	\key SCB_31 !conc/soil FL; full slab & footings; TB; *non-brick veneer
+	\key SCB_32 !conc/soil FL; full slab & footings; TB; *brick on slab
+	\key SCB_37 !conc/soil FL; 0.35m perm slab & footings; TB; *non-brick
+	\key SCB_38 !conc/soil FL; 0.35m perm slab & footings; TB; *brick on slb
+	\key SCB_39 !conc/soil FL; 0.75m perm slab & footings; TB; *non-brick
+	\key SCB_40 !conc/soil FL; 0.75m perm slab & footings; TB; *brick on slb
+	\key SCA_1 !conc/soil FL; 0.6m perm top slab ins; *non-brick veneer
+	\key SCA_2 !conc/soil FL; 0.6m perm top slab ins; *brick on slab
+	\key SCA_9 !conc/soil FL; 1.0m perm top slab ins; *non-brick veneer
+	\key SCA_10 !conc/soil FL; 1.0m perm top slab ins; *brick on slab
+   	\note First letter stands for foundation (S=Slab); Second letter stands for material (C=Concrete, W=Wood); Third letter stands for  slab insulation (N=None, A=Above, B=Below).
+   	\note Required (mandatory) only if model type = Foundation description and the foundation is a slab-in-grade.
+   N1,  \field BASESIMP Fraction
+   	\required-field
+        \type real
+        \default 1.0
+        \minimum> 0.0
+        \maximum 1.0
+        \note The fraction of the heat losses calculated by BASESIMP to be affected to the zone.  This value is used to reduce heat losses for foundations that are not entirely exposed to the soil/ambient.
+   N2,  \field Foundation height
+   	\type real
+        \minimum 1.0
+        \maximum 2.5
+        \units m
+        \note The height of the foundation: including above and below grade portion.  Must be at least 0.1m greater than foundation depth.
+        \note Required (mandatory) only if model type = Foundation description.
+   N3,  \field Foundation depth
+   	\type real
+        \minimum> 0.0
+        \maximum 2.4
+        \units m
+        \note The below grade portion of the foundation.
+        \note <= 0.05m for slab-in-grade.
+        \note >= 0.65m for basements.
+        \note Should not be between 0.05m and 0.65m: >0.65 for basements and <0.05 for slabs
+        \note Required (mandatory) only if model type = Foundation description.
+   N4,  \field Foundation length
+       	\type real
+        \minimum 1
+        \maximum 100
+        \units m
+        \note The length (longer side) of the foundation.
+   N5,  \field Foundation width
+       	\type real
+        \minimum 1
+        \maximum 20
+        \units m
+        \note The width (shorter side) of the foundation.  Can not be greater than the length.
+        \note Required (mandatory) only if model type = Foundation description.
+   N6,  \field Wall insulation overlap
+        \type real
+        \minimum 0
+        \maximum 2.4
+        \units m
+        \note The overlap between inside and outside wall insulations.  Must be smaller than foundation depth.
+        \note Required (mandatory) only if model type = Foundation description and the foundation is a basement with wall insulation overlap.
+   N7,  \field Insulation resistance
+        \type real
+        \minimum 0
+        \maximum 9
+        \units m2-K/W
+        \note The thermal resistance (RSI) of the insulation.
+        \note Required (mandatory) only if model type = Foundation description and an insulated configuration is selected.
+   N8,  \field Soil thermal conductivity
+        \type real
+        \minimum 0.85
+        \maximum 1.9
+        \units W/m-K
+        \note The thermal conductivity of the soil.
+        \note Required (mandatory) only if model type = Foundation description.
+   N9,  \field Water table depth
+        \type real
+        \minimum 5
+        \maximum 15
+        \units m
+        \note The depth at which the water table is located.
+        \note Required (mandatory) only if model type = Foundation description.
+   N10, \field AG losses coef
+        \type real
+        \minimum 0
+        \units W/K
+        \note The BASECALC above grade heat loss coefficient
+        \note Required (mandatory) only if model type = BASECALC coefficients.
+   N11, \field BGavg coef
+        \type real
+        \minimum 0
+        \units W/K
+        \note The BASECALC average below grade heat loss coefficient
+        \note Required (mandatory) only if model type = BASECALC coefficients.
+   N12, \field BGvar coef
+        \type real
+        \minimum 0
+        \units W/K
+        \note The BASECALC variable below grade heat loss coefficient
+        \note Required (mandatory) only if model type = BASECALC coefficients
+   N13, \field Thermal response
+   	\type real
+   	\units radiant
+   	\note The thermal response (Phase), in radiants, of the foundation/soil system.
+	\note Required (mandatory) only if model type = BASECALC coecients.
+   N14, \field Average ground temperature
+   	\required-field
+        \type real
+        \default 6
+        \minimum -10
+        \maximum 20
+        \units C
+        \note The mean annual ambient temperature.
+   N15, \field Temperature variation amplitude
+   	\required-field
+        \type real
+        \default 5
+        \minimum 0
+        \maximum 25
+        \units C
+        \note The amplitude of the sine wave modeling the anual ground temperature.
+   N16; \field Phase lag
+        \type real
+        \minimum 0
+        \maximum 1
+        !\units radiant
+        \note The phase lag, in radients, of the  sine wave modeling the anual ground temperature.
+        \note Required (mandatory) only if model type = BASECALC coefficients.
 
 Site:GroundReflectance,
         \memo Specifies the ground reflectance values used to calculate ground reflected solar.
