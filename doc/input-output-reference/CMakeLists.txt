@@ -17,6 +17,7 @@ SET( INCLUDED_TEX
   ${CMAKE_SOURCE_DIR}/doc/input-output-reference/src/appendix-a-units-and-abbreviations.tex
   ${CMAKE_SOURCE_DIR}/doc/input-output-reference/src/appendix-a-units-and-abbreviations/standard-energyplus-conditions.tex
   ${CMAKE_SOURCE_DIR}/doc/input-output-reference/src/appendix-a-units-and-abbreviations/standard-energyplus-units.tex
+  ${CMAKE_SOURCE_DIR}/doc/input-output-reference/src/appendix-b-basesimp-configurations.tex
   ${CMAKE_SOURCE_DIR}/doc/input-output-reference/src/energyplus-economics/group-economics.tex
   ${CMAKE_SOURCE_DIR}/doc/input-output-reference/src/energyplus-economics/introduction-to-economics.tex
   ${CMAKE_SOURCE_DIR}/doc/input-output-reference/src/energyplus-economics/conceptual-framework-variables-and-hierarchy.tex
