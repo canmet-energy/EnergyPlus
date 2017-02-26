@@ -77,7 +77,6 @@
 #include <DataHeatBalance.hh>
 #include <HeatBalanceInternalHeatGains.hh>
 
-
 namespace EnergyPlus {
 
 	namespace BaseSimp {
@@ -131,8 +130,9 @@ namespace EnergyPlus {
 		
 		// SUBROUTINE SPECIFICATIONS FOR MODULE BASESIMP
 
-		// Object Data
+		// Extern object data must be re-declared here in order to allocate the memory required for them to be available externally
 		Array1D< BSFoundationSpecs > BaseSimp; // BaseSimp data
+		int NumBSFoundation = 0;
 
 		// MODULE SUBROUTINES:
 
@@ -368,7 +368,7 @@ namespace EnergyPlus {
 			using DataGlobals::NumOfTimeStepInHour;
 			using DataGlobals::Pi;
 			using DataHeatBalance::IntGainTypeOf_Basesimp;	// Connection to zone internal gains
-								
+											
 			//LOCAL VARIABLES
 			int BSFoundationNum;				// Foundation counter for loops
 			int BSTimeStepNum;					// Time step counter for loops
@@ -388,7 +388,6 @@ namespace EnergyPlus {
 			
 			// Otherwise, allocate the memory and read the variables
 			BaseSimp.allocate(NumBSFoundation);
-			//BaseSimpReport.allocate(NumBSFoundation);
 			CheckEquipName.dimension(NumBSFoundation, true);
 			
 			// Evaluate number of time steps in a week

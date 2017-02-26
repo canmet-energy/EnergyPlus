@@ -145,9 +145,6 @@ static Real64	BSCornerCoeff[17][20];  // Corner coefficients
 // Omega constant (period)
 static Real64	BSOmega;
 
-// Number of BASESIMP objects in model
-static int NumBSFoundation(0);
-
 // Indicate if BASESIMP initialization is required
 static bool InitBasesimpFlag(true);
 
@@ -163,6 +160,9 @@ static const Real64	BSTzoneInit(20.0);  // Initial zone temperature to determine
 // Time (Hour of the year)
 static Real64 HourOfYear(0.0);		// Hour of the year
 
+// Number of BASESIMP objects in model
+// Make public to access from gTester
+extern int NumBSFoundation;
 
 } // BaseSimp
 
